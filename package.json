@@ -1,0 +1,37 @@
+{
+  "name": "react-native-ux-cam",
+  "version": "0.1.0",
+  "description": "React Native wrapper for uxcam.com.",
+  "main": "./src/UXCam.js",
+  "files": [
+    "src",
+    "ios",
+    "react-native-ux-cam.podspec"
+  ],
+  "keywords": [
+    "react-native",
+    "uxcam",
+    "ux-cam",
+    "ios"
+  ],
+  "author": "Mark Miyashita <negativetwelve@gmail.com> (https://github.com/negativetwelve)",
+  "contributors": [
+    {
+      "name": "Mark Miyashita",
+      "email": "negativetwelve@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/negativetwelve/react-native-ux-cam.git"
+  },
+  "bugs": {
+    "url": "https://github.com/negativetwelve/react-native-ux-cam/issues"
+  },
+  "homepage": "https://github.com/negativetwelve/react-native-ux-cam",
+  "engines": {
+  },
+  "dependencies": {
+  }
+}
