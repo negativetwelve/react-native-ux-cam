@@ -33,6 +33,10 @@
   "engines": {},
   "dependencies": {},
   "devDependencies": {
+    "babel-eslint": "7.0.0",
     "eslint": "3.8.1"
+  },
+  "scripts": {
+    "lint": "eslint ."
   }
 }
