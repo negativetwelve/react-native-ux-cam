@@ -23,15 +23,16 @@
   ],
   "license": "MIT",
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/negativetwelve/react-native-ux-cam.git"
+    "url": "git+https://github.com/negativetwelve/react-native-ux-cam.git",
+    "type": "git"
   },
   "bugs": {
     "url": "https://github.com/negativetwelve/react-native-ux-cam/issues"
   },
   "homepage": "https://github.com/negativetwelve/react-native-ux-cam",
-  "engines": {
-  },
-  "dependencies": {
+  "engines": {},
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "3.8.1"
   }
 }
