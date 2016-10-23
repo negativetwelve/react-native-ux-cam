@@ -1,5 +1,8 @@
 // Libraries
-import {NativeModules: {RNUXCam}} from 'react-native';
+import {NativeModules} from 'react-native';
+
+// Native Modules
+const {RNUXCam} = NativeModules;
 
 
 class UXCam {
