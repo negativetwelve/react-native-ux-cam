@@ -15,6 +15,10 @@ class UXCam {
     return RNUXCam.stopApplicationAndUploadData();
   }
 
+  occludeSensitiveScreen(shouldOcclude) {
+    return RNUXCam.occludeSensitiveScreen(shouldOcclude);
+  }
+
   tagScreenName(screenName) {
     return RNUXCam.tagScreenName(screenName);
   }
