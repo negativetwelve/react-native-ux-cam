@@ -72,7 +72,7 @@
 			dependencies = (
 			);
 			name = RNUXCam;
-			productName = RNIntercom;
+			productName = RNUXCam;
 			productReference = 112EE36D1CC0AB8A00BF6BB8 /* libRNUXCam.a */;
 			productType = "com.apple.product-type.library.static";
 		};
