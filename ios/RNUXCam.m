@@ -47,4 +47,12 @@ RCT_EXPORT_METHOD(urlForCurrentSession) {
   return [UXCam urlForCurrentSession];
 }
 
+RCT_EXPORT_METHOD(markUserAsFavorite) {
+  return [UXCam markUserAsFavorite];
+}
+
+RCT_EXPORT_METHOD(addTag:(NSString *)tag withProperties:(NSDictionary *)properties) {
+  [UXCam addTag:tag withProperties:properties];
+}
+
 @end

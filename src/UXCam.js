@@ -7,6 +7,9 @@ const {RNUXCam} = NativeModules;
 
 class UXCam {
 
+  // --------------------------------------------------
+  // Initialize
+  // --------------------------------------------------
   startWithKey(key) {
     return RNUXCam.startWithKey(key);
   }
@@ -15,10 +18,16 @@ class UXCam {
     return RNUXCam.stopApplicationAndUploadData();
   }
 
+  // --------------------------------------------------
+  // Occlude
+  // --------------------------------------------------
   occludeSensitiveScreen(shouldOcclude) {
     return RNUXCam.occludeSensitiveScreen(shouldOcclude);
   }
 
+  // --------------------------------------------------
+  // Tags
+  // --------------------------------------------------
   tagScreenName(screenName) {
     return RNUXCam.tagScreenName(screenName);
   }
@@ -29,6 +38,17 @@ class UXCam {
     return RNUXCam.tagUserName(userName.toString());
   }
 
+  addTag(tag, properties = {}) {
+    return RNUXCam.addTag(tag, properties);
+  }
+
+  markUserAsFavorite() {
+    return RNUXCam.markUserAsFavorite();
+  }
+
+  // --------------------------------------------------
+  // URLs
+  // --------------------------------------------------
   urlForCurrentUser() {
     return RNUXCam.urlForCurrentUser();
   }

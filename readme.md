@@ -53,6 +53,15 @@ UXCam.tagScreenName('my screen');
 // Tag a user.
 UXCam.tagUserName('John Doe');
 
+// Add a custom tag with properties.
+UXCam.addTag('logged-in', {
+  isLoggedIn: true,
+  isAwesome: true,
+});
+
+// Mark a user as a favorite.
+UXCam.markUserAsFavorite();
+
 // Get the url for the current user. Useful for connecting to other
 // analytics services.
 const currentUserUrl = UXCam.urlForCurrentUser();
