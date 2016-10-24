@@ -53,6 +53,12 @@ UXCam.tagScreenName('my screen');
 // Tag a user.
 UXCam.tagUserName('John Doe');
 
+// Hide a sensitive screen.
+UXCam.occludeSensitiveScreen(true);
+
+// Unhide a sensitive screen.
+UXCam.occludeSensitiveScreen(false);
+
 // Stop recording and upload data manually.
 UXCam.stopApplicationAndUploadData();
 ```
