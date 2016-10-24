@@ -65,13 +65,12 @@ public class UXCamModule extends ReactContextBaseJavaModule {
   public void urlForCurrentUser(Promise promise) {
     String url = UXCam.urlForCurrentUser();
     if (url == null || url.isEmpty()) {
-      promise.resolve(url);
-    }
-    else {
       String code = "no_url";
       String message = "Could not retrieve the url for the current user.";
       Throwable error = new Throwable(message);
       promise.reject(code, message, error);
+    } else {
+      promise.resolve(url);
     }
   }
 
@@ -80,13 +79,12 @@ public class UXCamModule extends ReactContextBaseJavaModule {
   public void urlForCurrentSession(Promise promise) {
     String url = UXCam.urlForCurrentSession();
     if (url == null || url.isEmpty()) {
-      promise.resolve(url);
-    }
-    else {
       String code = "no_url";
       String message = "Could not retrieve the url for the current session.";
       Throwable error = new Throwable(message);
       promise.reject(code, message, error);
+    } else {
+      promise.resolve(url);
     }
   }
 
