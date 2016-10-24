@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage = package[:homepage]
   s.authors = package[:contributors].flat_map { |author| { author[:name] => author[:email] } }
   s.summary = package[:description]
-  s.source = { git: package.dig(:repository, :url) }
+  s.source = { git: package[:repository][:url] }
   s.source_files = "ios/*"
   s.platform = :ios, "8.0"
 
