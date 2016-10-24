@@ -27,6 +27,10 @@ RCT_EXPORT_METHOD(stopApplicationAndUploadData) {
   [UXCam stopApplicationAndUploadData];
 }
 
+RCT_EXPORT_METHOD(occludeSensitiveScreen:(BOOL)occlude) {
+  [UXCam occludeSensitiveScreen:occlude];
+}
+
 RCT_EXPORT_METHOD(tagScreenName:(NSString *)screenName) {
   [UXCam tagScreenName:screenName];
 }
