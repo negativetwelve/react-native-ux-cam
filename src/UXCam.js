@@ -49,11 +49,11 @@ class UXCam {
   // --------------------------------------------------
   // URLs
   // --------------------------------------------------
-  urlForCurrentUser() {
+  async urlForCurrentUser() {
     return RNUXCam.urlForCurrentUser();
   }
 
-  urlForCurrentSession() {
+  async urlForCurrentSession() {
     return RNUXCam.urlForCurrentSession();
   }
 
