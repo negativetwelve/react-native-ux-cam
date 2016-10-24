@@ -4,15 +4,19 @@
   "description": "React Native wrapper for uxcam.com.",
   "main": "./src/UXCam.js",
   "files": [
-    "src",
+    "android",
     "ios",
-    "react-native-ux-cam.podspec"
+    "react-native-ux-cam.podspec",
+    "src"
   ],
   "keywords": [
+    "android",
+    "ios",
     "react-native",
+    "user-sessions",
+    "ux",
     "uxcam",
-    "ux-cam",
-    "ios"
+    "ux-cam"
   ],
   "author": "Mark Miyashita <negativetwelve@gmail.com> (https://github.com/negativetwelve)",
   "contributors": [
