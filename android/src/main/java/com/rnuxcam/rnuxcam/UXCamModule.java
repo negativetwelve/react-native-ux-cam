@@ -7,6 +7,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableMapKeySetIterator;
+import com.facebook.react.bridge.Promise;
 
 import java.util.HashMap;
 
@@ -61,14 +62,32 @@ public class UXCamModule extends ReactContextBaseJavaModule {
 
   @SuppressWarnings("unused")
   @ReactMethod
-  public String urlForCurrentUser() {
-    return UXCam.urlForCurrentUser();
+  public void urlForCurrentUser(Promise promise) {
+    String url = UXCam.urlForCurrentUser();
+    if (url == null || url.isEmpty()) {
+      promise.resolve(url);
+    }
+    else {
+      String code = "no_url";
+      String message = "Could not retrieve the url for the current user.";
+      Throwable error = new Throwable(message);
+      promise.reject(code, message, error);
+    }
   }
 
   @SuppressWarnings("unused")
   @ReactMethod
-  public String urlForCurrentSession() {
-    return UXCam.urlForCurrentSession();
+  public void urlForCurrentSession(Promise promise) {
+    String url = UXCam.urlForCurrentSession();
+    if (url == null || url.isEmpty()) {
+      promise.resolve(url);
+    }
+    else {
+      String code = "no_url";
+      String message = "Could not retrieve the url for the current session.";
+      Throwable error = new Throwable(message);
+      promise.reject(code, message, error);
+    }
   }
 
   @SuppressWarnings("unused")
