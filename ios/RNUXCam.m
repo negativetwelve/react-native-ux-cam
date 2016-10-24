@@ -39,4 +39,12 @@ RCT_EXPORT_METHOD(tagUserName:(NSString *)userName) {
   [UXCam tagUsersName:userName];
 }
 
+RCT_EXPORT_METHOD(urlForCurrentUser) {
+  return [UXCam urlForCurrentUser];
+}
+
+RCT_EXPORT_METHOD(urlForCurrentSession) {
+  return [UXCam urlForCurrentSession];
+}
+
 @end
