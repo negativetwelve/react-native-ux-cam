@@ -53,6 +53,13 @@ UXCam.tagScreenName('my screen');
 // Tag a user.
 UXCam.tagUserName('John Doe');
 
+// Get the url for the current user. Useful for connecting to other
+// analytics services.
+const currentUserUrl = UXCam.urlForCurrentUser();
+
+// Get the url for the current session.
+const currentSessionUrl = UXCam.urlForCurrentSession();
+
 // Hide a sensitive screen.
 UXCam.occludeSensitiveScreen(true);
 

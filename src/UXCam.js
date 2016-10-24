@@ -29,6 +29,14 @@ class UXCam {
     return RNUXCam.tagUserName(userName.toString());
   }
 
+  urlForCurrentUser() {
+    return RNUXCam.urlForCurrentUser();
+  }
+
+  urlForCurrentSession() {
+    return RNUXCam.urlForCurrentSession();
+  }
+
 }
 
 
