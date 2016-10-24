@@ -39,12 +39,34 @@ RCT_EXPORT_METHOD(tagUserName:(NSString *)userName) {
   [UXCam tagUsersName:userName];
 }
 
-RCT_EXPORT_METHOD(urlForCurrentUser) {
-  return [UXCam urlForCurrentUser];
+RCT_EXPORT_METHOD(urlForCurrentUser:(RCTPromiseResolveBlock)resolve
+                           rejecter:(RCTPromiseRejectBlock)reject) {
+  NSString *url = [UXCam urlForCurrentUser];
+
+  if (url) {
+    resolve(url);
+  } else {
+    NSString *code = @"no_url";
+    NSString *message = @"Could not retrieve the url for the current user.";
+    NSError *error = [NSError errorWithDomain:@"RNUXCam" code:0 userInfo:nil];
+
+    reject(code, message, error);
+  }
 }
 
-RCT_EXPORT_METHOD(urlForCurrentSession) {
-  return [UXCam urlForCurrentSession];
+RCT_EXPORT_METHOD(urlForCurrentSession:(RCTPromiseResolveBlock)resolve
+                              rejecter:(RCTPromiseRejectBlock)reject) {
+  NSString *url = [UXCam urlForCurrentSession];
+
+  if (url) {
+    resolve(url);
+  } else {
+    NSString *code = @"no_url";
+    NSString *message = @"Could not retrieve the url for the current session.";
+    NSError *error = [NSError errorWithDomain:@"RNUXCam" code:0 userInfo:nil];
+
+    reject(code, message, error);
+  }
 }
 
 RCT_EXPORT_METHOD(markUserAsFavorite) {

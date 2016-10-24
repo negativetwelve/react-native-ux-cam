@@ -63,11 +63,11 @@ UXCam.addTag('logged-in', {
 UXCam.markUserAsFavorite();
 
 // Get the url for the current user. Useful for connecting to other
-// analytics services.
-const currentUserUrl = UXCam.urlForCurrentUser();
+// analytics services. Note, this method is async and returns a promise.
+const currentUserUrl = await UXCam.urlForCurrentUser();
 
-// Get the url for the current session.
-const currentSessionUrl = UXCam.urlForCurrentSession();
+// Get the url for the current session. Note, this method is also async.
+const currentSessionUrl = await UXCam.urlForCurrentSession();
 
 // Hide a sensitive screen.
 UXCam.occludeSensitiveScreen(true);
