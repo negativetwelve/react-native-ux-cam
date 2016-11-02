@@ -43,6 +43,14 @@ RCT_EXPORT_METHOD(tagUserName:(NSString *)userName) {
   [UXCam tagUsersName:userName];
 }
 
+RCT_EXPORT_METHOD(addTag:(NSString *)tag withProperties:(NSDictionary *)properties) {
+  [UXCam addTag:tag withProperties:properties];
+}
+
+RCT_EXPORT_METHOD(markSessionAsFavorite) {
+  return [UXCam markSessionAsFavorite];
+}
+
 RCT_EXPORT_METHOD(urlForCurrentUser:(RCTPromiseResolveBlock)resolve
                            rejecter:(RCTPromiseRejectBlock)reject) {
   NSString *url = [UXCam urlForCurrentUser];
@@ -71,14 +79,6 @@ RCT_EXPORT_METHOD(urlForCurrentSession:(RCTPromiseResolveBlock)resolve
 
     reject(code, message, error);
   }
-}
-
-RCT_EXPORT_METHOD(markSessionAsFavorite) {
-  return [UXCam markSessionAsFavorite];
-}
-
-RCT_EXPORT_METHOD(addTag:(NSString *)tag withProperties:(NSDictionary *)properties) {
-  [UXCam addTag:tag withProperties:properties];
 }
 
 @end

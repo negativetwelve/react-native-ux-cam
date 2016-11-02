@@ -30,6 +30,18 @@ public class UXCamModule extends ReactContextBaseJavaModule {
 
   @SuppressWarnings("unused")
   @ReactMethod
+  public void stopApplicationAndUploadData() {
+    UXCam.stopApplicationAndUploadData();
+  }
+
+  @SuppressWarnings("unused")
+  @ReactMethod
+  public void occludeSensitiveScreen(boolean occlude) {
+    UXCam.occludeSensitiveScreen(occlude);
+  }
+
+  @SuppressWarnings("unused")
+  @ReactMethod
   public void tagScreenName(String screenName) {
     UXCam.tagScreenName(screenName);
   }
@@ -88,15 +100,4 @@ public class UXCamModule extends ReactContextBaseJavaModule {
     }
   }
 
-  @SuppressWarnings("unused")
-  @ReactMethod
-  public void occludeSensitiveScreen(boolean occlude) {
-    UXCam.occludeSensitiveScreen(occlude);
-  }
-
-  @SuppressWarnings("unused")
-  @ReactMethod
-  public void stopApplicationAndUploadData() {
-    UXCam.stopApplicationAndUploadData();
-  }
 }
