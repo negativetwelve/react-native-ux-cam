@@ -78,8 +78,8 @@ UXCam.addTag('logged-in', {
   isAwesome: true,
 });
 
-// Mark a user as a favorite.
-UXCam.markUserAsFavorite();
+// Mark a session as a favorite.
+UXCam.markSessionAsFavorite();
 
 // Get the url for the current user. Useful for connecting to other
 // analytics services. Note, this method is async and returns a promise.

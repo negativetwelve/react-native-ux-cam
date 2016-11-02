@@ -56,7 +56,7 @@ public class UXCamModule extends ReactContextBaseJavaModule {
 
   @SuppressWarnings("unused")
   @ReactMethod
-  public void markUserAsFavorite() {
+  public void markSessionAsFavorite() {
     UXCam.markSessionAsFavorite();
   }
 
