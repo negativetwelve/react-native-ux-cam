@@ -42,8 +42,8 @@ class UXCam {
     return RNUXCam.addTag(tag, properties);
   }
 
-  markUserAsFavorite() {
-    return RNUXCam.markUserAsFavorite();
+  markSessionAsFavorite() {
+    return RNUXCam.markSessionAsFavorite();
   }
 
   // --------------------------------------------------
