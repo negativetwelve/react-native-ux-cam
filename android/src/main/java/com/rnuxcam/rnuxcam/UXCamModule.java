@@ -42,6 +42,12 @@ public class UXCamModule extends ReactContextBaseJavaModule {
 
   @SuppressWarnings("unused")
   @ReactMethod
+  public void setAutomaticScreenNameTagging(boolean automaticScreenNameTagging) {
+    // TODO(mark): Not available on Android.
+  }
+
+  @SuppressWarnings("unused")
+  @ReactMethod
   public void occludeSensitiveScreen(boolean occlude) {
     UXCam.occludeSensitiveScreen(occlude);
   }
