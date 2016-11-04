@@ -1,5 +1,5 @@
 // Libraries
-import {NativeModules, Platform} from 'react-native';
+import {NativeModules} from 'react-native';
 
 // Native Modules
 const {RNUXCam} = NativeModules;
@@ -18,15 +18,12 @@ class UXCam {
     return RNUXCam.stopApplicationAndUploadData();
   }
 
+  restartSession() {
+    return RNUXCam.restartSession();
+  }
+
   setAutomaticScreenNameTagging(enableScreenNameTagging) {
-    if (Platform.OS === 'android') {
-      // eslint-disable-next-line
-      console.warn(
-        'UXCam#setAutomaticScreenNameTagging not available on Android',
-      );
-    } else {
-      return RNUXCam.setAutomaticScreenNameTagging(enableScreenNameTagging);
-    }
+    return RNUXCam.setAutomaticScreenNameTagging(enableScreenNameTagging);
   }
 
   // --------------------------------------------------
