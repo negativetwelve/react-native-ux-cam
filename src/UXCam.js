@@ -18,6 +18,10 @@ class UXCam {
     return RNUXCam.stopApplicationAndUploadData();
   }
 
+  restartSession() {
+    return RNUXCam.restartSession();
+  }
+
   setAutomaticScreenNameTagging(enableScreenNameTagging) {
     if (Platform.OS === 'android') {
       // eslint-disable-next-line

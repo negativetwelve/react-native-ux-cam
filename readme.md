@@ -96,6 +96,9 @@ UXCam.occludeSensitiveScreen(false);
 
 // Stop recording and upload data manually.
 UXCam.stopApplicationAndUploadData();
+
+// To start a new recording:
+UXCam.restartSession();
 ```
 
 If a method is missing from the official SDK, please send a PR!
