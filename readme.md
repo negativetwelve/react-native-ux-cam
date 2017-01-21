@@ -23,7 +23,7 @@ react-native link react-native-ux-cam
 Then, add the following to your Podfile:
 
 ```ruby
-pod "UXCam", "~> 2.5.7"
+pod "UXCam", "~> 2.5.8"
 ```
 
 Then run:
