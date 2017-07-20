@@ -63,7 +63,7 @@ public class UXCamModule extends ReactContextBaseJavaModule {
 
     ReadableMapKeySetIterator iterator = properties.keySetIterator();
     while (iterator.hasNextKey()) {
-      String key = iterator.nextKey().toString();
+      String key = iterator.nextKey();
       String value = properties.getString(key);
       map.put(key, value);
     }
