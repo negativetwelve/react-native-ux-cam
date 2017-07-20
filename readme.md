@@ -42,20 +42,11 @@ Run the following:
 react-native link react-native-ux-cam
 ```
 
-Then add the following to your file `android/app/build.gradle` (or add the maven url to your existing repositories section):
-```gradle
-repositories {
-    maven {
-        url 'http://sdk.uxcam.com/android/'
-    }
-}
-```
-
 And add this to your file `android/app/src/main/AndroidManifest.xml`, inside your `<application>` tag:
+
 ```xml
 <service android:name="com.uxcam.service.HttpPostService"/>
 ```
-
 
 ## Usage
 
