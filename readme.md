@@ -1,5 +1,10 @@
 # react-native-ux-cam
 
+[![npm](https://img.shields.io/npm/v/react-native-ux-cam.svg)](https://www.npmjs.com/package/react-native-ux-cam)
+[![npm](https://img.shields.io/npm/dt/react-native-ux-cam.svg)](https://www.npmjs.com/package/react-native-ux-cam)
+[![npm](https://img.shields.io/npm/l/react-native-ux-cam.svg)](https://github.com/negativetwelve/react-native-ux-cam/blob/master/LICENSE)
+[![CircleCI branch](https://img.shields.io/circleci/project/github/negativetwelve/react-native-ux-cam/master.svg)](https://circleci.com/gh/negativetwelve/react-native-ux-cam)
+
 React Native wrapper for [UXCam](https://uxcam.com).
 
 ## Setup
