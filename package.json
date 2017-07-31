@@ -1,17 +1,18 @@
 {
   "name": "react-native-ux-cam",
-  "version": "3.1.3",
+  "version": "3.2.0",
   "description": "React Native wrapper for uxcam.com.",
   "main": "./build/UXCam.js",
   "files": [
     "android",
+    "build",
     "ios",
-    "js",
     "react-native-ux-cam.podspec"
   ],
   "keywords": [
     "android",
     "ios",
+    "jolt",
     "react-native",
     "user-sessions",
     "ux",
