@@ -37,6 +37,7 @@
   "engines": {},
   "dependencies": {},
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-preset-jolt": "^1.0.0",
     "eslint-config-jolt": "^1.0.2"
   },
@@ -49,6 +50,9 @@
     "extends": "jolt"
   },
   "scripts": {
-    "lint": "eslint js"
+    "build": "babel js --out-dir build --ignore '**/*.spec.js'",
+    "lint": "eslint js",
+    "prepublishOnly": "yarn build",
+    "test": "echo 'No Tests'"
   }
 }

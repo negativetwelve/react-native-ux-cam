@@ -31,6 +31,10 @@ project.xcworkspace
 # Cocoapods
 Pods/
 
+# General
+*.log
+
 # JS
 node_modules/
 npm-debug.log
+build
