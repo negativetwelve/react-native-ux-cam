@@ -28,7 +28,7 @@ matrix:
           - extra-google-m2repository
           - addon-google_apis-google-16
       script:
-        - bin/run-examples.sh
+        - bin/run-android.sh
     - language: objective-c
       os: osx
       osx_image: xcode8.3
@@ -42,4 +42,4 @@ matrix:
         - brew install yarn
         - brew outdated yarn || brew upgrade yarn
       script:
-        - bin/run-examples.sh
+        - bin/run-ios.sh
