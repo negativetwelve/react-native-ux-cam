@@ -45,7 +45,11 @@
     "extends": "jolt"
   },
   "jest": {
-    "preset": "jest-preset-jolt"
+    "preset": "jest-preset-jolt",
+    "testPathIgnorePatterns": [
+      "<rootDir>/examples",
+      "<rootDir>/node_modules"
+    ]
   },
   "scripts": {
     "lint": "eslint js",
