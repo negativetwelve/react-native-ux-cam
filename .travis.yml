@@ -38,8 +38,6 @@ matrix:
       env:
         - LANE='ios'
       before_install:
-        - brew update
         - brew install yarn
-        - brew outdated yarn || brew upgrade yarn
       script:
         - bin/run-ios.sh
