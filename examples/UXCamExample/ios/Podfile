@@ -1,0 +1,9 @@
+source "https://github.com/CocoaPods/Specs.git"
+platform :ios, "8.0"
+project = "UXCamExample"
+node_modules = "../node_modules"
+react_native = "#{node_modules}/react-native"
+
+target project do
+  pod "react-native-ux-cam", path: "#{node_modules}/react-native-ux-cam"
+end
