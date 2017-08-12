@@ -7,37 +7,53 @@ matrix:
         - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
         - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
       cache:
+        bundler: true
+        yarn: true
         directories:
-          - $HOME/.yarn-cache
+          - node_modules
           - $HOME/.gradle/caches/
           - $HOME/.gradle/wrapper/
-      sudo: required
-      before_install:
-        - nvm install 8
-        - node --version
-        - travis_retry curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-        - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-        - travis_retry sudo apt-get update -qq
-        - travis_retry sudo apt-get install -y -qq yarn
+          - $HOME/.android/build-cache
       android:
         components:
-          - build-tools-23.0.1
+          - tools
+          - platform-tools
+          - tools
+          - build-tools-23.0.0
           - android-23
           - extra-android-m2repository
           - extra-google-google_play_services
           - extra-google-m2repository
           - addon-google_apis-google-16
+      sudo: required
+      before_install:
+        - rvm install ruby-2.3.0
+        - nvm install 8
+        - cd examples/UXCamExample
+        - yarn
+        - cd android
+        - bundle install
       script:
-        - bin/run-android.sh
+        - bundle exec fastlane build
     - language: objective-c
       os: osx
       osx_image: xcode8.3
       cache:
-        - bundler
-        - pip
-      env:
-        - LANE='ios'
+        bundler: true
+        cocoapods: true
+        yarn: true
+        directories:
+          - node_modules
+          - $HOME/Library/Caches/Homebrew
       before_install:
-        - brew install yarn
+        - rvm install ruby-2.3.0
+        - nvm install 8
+        - brew install yarn --ignore-dependencies
+        - cd examples/UXCamExample
+        - yarn
+        - cd ios
+        - bundle install
+        - bundle exec pod repo update
+        - bundle exec pod install
       script:
-        - bin/run-ios.sh
+        - bundle exec fastlane build
