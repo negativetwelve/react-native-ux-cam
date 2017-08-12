@@ -26,7 +26,7 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-project.xcworkspace
+*.xcworkspace
 
 # Cocoapods
 Pods/

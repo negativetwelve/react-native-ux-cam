@@ -55,6 +55,7 @@
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
     "lint": "eslint js",
+    "setup": "yarn install && yarn bootstrap",
     "test": "jest"
   }
 }

@@ -1,0 +1,19 @@
+PODS:
+  - react-native-ux-cam (3.4.0):
+    - UXCam (~> 2.5.8)
+  - UXCam (2.5.11)
+
+DEPENDENCIES:
+  - react-native-ux-cam (from `../node_modules/react-native-ux-cam`)
+
+EXTERNAL SOURCES:
+  react-native-ux-cam:
+    :path: "../node_modules/react-native-ux-cam"
+
+SPEC CHECKSUMS:
+  react-native-ux-cam: e82a9d593937341854d81887a5aa0c9efbc2f672
+  UXCam: 24fc9a228f2c749a7d56a97db205394af92e6a6b
+
+PODFILE CHECKSUM: cc704fdffc065e5f6ee56a419b96d9900c8dbee8
+
+COCOAPODS: 1.2.1
