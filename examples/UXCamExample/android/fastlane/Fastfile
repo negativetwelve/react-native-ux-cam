@@ -1,0 +1,9 @@
+fastlane_version "2.47.0"
+default_platform :android
+
+platform :android do
+  desc "Builds the app"
+  lane :build do
+    gradle(task: "assembleRelease")
+  end
+end
