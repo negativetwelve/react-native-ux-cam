@@ -41,5 +41,5 @@ build
 package-lock.json
 
 # Fastlane
-*/fastlane/report.xml
-*/fastlane/test_output
+**/fastlane/report.xml
+**/fastlane/test_output
