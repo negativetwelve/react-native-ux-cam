@@ -39,3 +39,7 @@ node_modules/
 npm-debug.log
 build
 package-lock.json
+
+# Fastlane
+*/fastlane/report.xml
+*/fastlane/test_output

@@ -1,0 +1,19 @@
+fastlane_version "2.47.0"
+default_platform :ios
+
+# Variables
+scheme = "UXCamExample"
+workspace = "#{scheme}.xcworkspace"
+
+platform :ios do
+  desc "Builds the app"
+  lane :build do
+    gym(
+      workspace: workspace,
+      scheme: scheme,
+      clean: true,
+      silent: true,
+      export_method: "ad-hoc",
+    )
+  end
+end
