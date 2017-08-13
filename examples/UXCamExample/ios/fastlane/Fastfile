@@ -13,6 +13,7 @@ platform :ios do
       scheme: scheme,
       clean: true,
       silent: true,
+      suppress_xcode_output: true,
       export_method: "ad-hoc",
     )
   end
