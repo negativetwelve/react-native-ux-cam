@@ -26,7 +26,7 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-project.xcworkspace
+*.xcworkspace
 
 # Cocoapods
 Pods/
@@ -38,3 +38,8 @@ Pods/
 node_modules/
 npm-debug.log
 build
+package-lock.json
+
+# Fastlane
+**/fastlane/report.xml
+**/fastlane/test_output

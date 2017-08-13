@@ -1,0 +1,21 @@
+fastlane_version "2.47.0"
+default_platform :ios
+
+# Variables
+scheme = "UXCamExample"
+project = "#{scheme}.xcodeproj"
+workspace = "#{scheme}.xcworkspace"
+
+platform :ios do
+  desc "Tests the app"
+  lane :test do
+    cocoapods(repo_update: true)
+    scan(
+      clean: true,
+      configuration: "Release",
+      devices: ["iPhone 6s"],
+      scheme: scheme,
+      workspace: workspace,
+    )
+  end
+end

@@ -1,0 +1,9 @@
+fastlane_version "2.47.0"
+default_platform :android
+
+platform :android do
+  desc "Tests the app"
+  lane :test do
+    gradle(task: "assembleRelease")
+  end
+end
