@@ -1,3 +1,5 @@
 rootProject.name = 'UXCamExample'
+include ':react-native-ux-cam'
+project(':react-native-ux-cam').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-ux-cam/android')
 
 include ':app'
