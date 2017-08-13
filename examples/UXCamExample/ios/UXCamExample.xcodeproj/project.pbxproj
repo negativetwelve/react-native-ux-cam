@@ -1139,6 +1139,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = XML9YS75M2;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = UXCamExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1146,7 +1147,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.markmiyashita.UXCamExample;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.markmiyashita.rn-example-uxcam";
 				PRODUCT_NAME = UXCamExample;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1160,6 +1161,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XML9YS75M2;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = UXCamExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1167,7 +1169,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.markmiyashita.UXCamExample;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.markmiyashita.rn-example-uxcam";
 				PRODUCT_NAME = UXCamExample;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
