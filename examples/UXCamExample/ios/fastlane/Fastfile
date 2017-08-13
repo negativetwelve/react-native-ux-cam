@@ -3,17 +3,18 @@ default_platform :ios
 
 # Variables
 scheme = "UXCamExample"
+project = "#{scheme}.xcodeproj"
 workspace = "#{scheme}.xcworkspace"
 
 platform :ios do
-  desc "Builds the app"
-  lane :build do
-    gym(
+  desc "Tests the app"
+  lane :test do
+    cocoapods
+    scan(
       workspace: workspace,
       scheme: scheme,
       clean: true,
-      silent: true,
-      export_method: "ad-hoc",
+      devices: ["iPhone 6s"],
     )
   end
 end

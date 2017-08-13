@@ -1,5 +1,8 @@
 PODS:
+  - React (0.47.1):
+    - React/Core (= 0.47.1)
   - react-native-ux-cam (3.4.0):
+    - React
     - UXCam (~> 2.5.8)
   - React/BatchedBridge (0.47.1):
     - React/Core
@@ -28,7 +31,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   React: f705239a901cb3f95445c34468e5b37b6f80a0d4
-  react-native-ux-cam: e82a9d593937341854d81887a5aa0c9efbc2f672
+  react-native-ux-cam: a4954d67d56bc17c5fd827495b3c31331fd7fcc3
   UXCam: 24fc9a228f2c749a7d56a97db205394af92e6a6b
   Yoga: 13a12502dfabb4c75b914071dcb542af800deed4
 

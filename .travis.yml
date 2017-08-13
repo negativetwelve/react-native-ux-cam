@@ -32,7 +32,7 @@ matrix:
         - cd android
         - bundle install
       script:
-        - bundle exec fastlane build
+        - bundle exec fastlane test
     - language: objective-c
       os: osx
       osx_image: xcode8.3
@@ -51,7 +51,5 @@ matrix:
         - yarn
         - cd ios
         - bundle install
-        - bundle exec pod repo update
-        - bundle exec pod install
       script:
-        - bundle exec fastlane build
+        - bundle exec fastlane test
