@@ -10,7 +10,6 @@ matrix:
         bundler: true
         yarn: true
         directories:
-          - node_modules
           - $HOME/.gradle/caches/
           - $HOME/.gradle/wrapper/
           - $HOME/.android/build-cache
@@ -27,6 +26,7 @@ matrix:
       before_install:
         - rvm install ruby-2.3.0
         - nvm install 8
+      install:
         - cd examples/UXCamExample
         - yarn
         - cd android
@@ -41,12 +41,12 @@ matrix:
         cocoapods: true
         yarn: true
         directories:
-          - node_modules
           - $HOME/Library/Caches/Homebrew
       before_install:
         - rvm install ruby-2.3.0
         - nvm install 8
         - brew install yarn --ignore-dependencies
+      install:
         - cd examples/UXCamExample
         - yarn
         - cd ios
