@@ -9,7 +9,7 @@ workspace = "#{scheme}.xcworkspace"
 platform :ios do
   desc "Tests the app"
   lane :test do
-    cocoapods
+    cocoapods(repo_update: true)
     scan(
       clean: true,
       configuration: "Release",
