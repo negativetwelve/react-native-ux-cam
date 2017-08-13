@@ -38,8 +38,7 @@
   "engines": {},
   "devDependencies": {
     "eslint-config-jolt": "^1.0.2",
-    "jest-preset-jolt": "^1.0.1",
-    "lerna": "^2.0.0"
+    "jest-preset-jolt": "^1.0.1"
   },
   "eslintConfig": {
     "extends": "jolt"
@@ -52,8 +51,6 @@
     ]
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "clean": "lerna clean",
     "lint": "eslint js",
     "setup": "yarn install && yarn bootstrap",
     "test": "jest"
