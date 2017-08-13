@@ -30,11 +30,11 @@ xcode-select --install
 
 # Available Actions
 ## iOS
-### ios build
+### ios test
 ```
-fastlane ios build
+fastlane ios test
 ```
-Builds the app
+Tests the app
 
 ----
 

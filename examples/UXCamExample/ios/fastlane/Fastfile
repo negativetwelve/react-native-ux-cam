@@ -11,10 +11,11 @@ platform :ios do
   lane :test do
     cocoapods
     scan(
-      workspace: workspace,
-      scheme: scheme,
       clean: true,
+      configuration: "Release",
       devices: ["iPhone 6s"],
+      scheme: scheme,
+      workspace: workspace,
     )
   end
 end
