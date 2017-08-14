@@ -36,6 +36,12 @@
   },
   "homepage": "https://github.com/negativetwelve/react-native-ux-cam",
   "engines": {},
+  "dependencies": {
+    "react-native-package": "^1.1.0"
+  },
+  "peerDependencies": {
+    "react-native": "*"
+  },
   "devDependencies": {
     "eslint-config-jolt": "^1.0.2",
     "jest-preset-jolt": "^1.0.1",

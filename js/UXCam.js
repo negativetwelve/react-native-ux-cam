@@ -1,71 +1,43 @@
 // Libraries
-import {NativeModules} from 'react-native';
-
-// Native Modules
-const {RNUXCam} = NativeModules;
+import {NativeModules, Platform} from 'react-native';
+import Package from 'react-native-package';
 
 
-class UXCam {
+/**
+ * Package.create handles two things:
+ *
+ *   1. Checks that for each platform that's `enabled`, the module is installed
+ *      properly. If it's not, it logs a warning.
+ *   2. Guards the module on every platform that is not `enabled`. This allows
+ *      the module to exist in cross-platform code without hacks to disable it.
+ *
+ * You can read more about `react-native-package` here:
+ * https://github.com/negativetwelve/react-native-package
+ */
+export default Package.create({
+  json: require('../package.json'),
+  nativeModule: NativeModules.RNUXCam,
+  enabled: Platform.select({
+    ios: true,
+  }),
+  export: (UXCam) => ({
+    // Initialize
+    startWithKey: (key) => UXCam.startWithKey(key),
+    stopApplicationAndUploadData: () => UXCam.stopApplicationAndUploadData(),
+    restartSession: () => UXCam.restartSession(),
+    setAutomaticScreenNameTagging: (isEnabled) => UXCam.setAutomaticScreenNameTagging(isEnabled),
 
-  // --------------------------------------------------
-  // Initialize
-  // --------------------------------------------------
-  startWithKey(key) {
-    return RNUXCam.startWithKey(key);
-  }
+    // Occlude
+    occludeSensitiveScreen: (shouldOcclude) => UXCam.occludeSensitiveScreen(shouldOcclude),
 
-  stopApplicationAndUploadData() {
-    return RNUXCam.stopApplicationAndUploadData();
-  }
+    // Tags
+    tagScreenName: (screenName) => UXCam.tagScreenName(screenName),
+    tagUserName: (userName) => UXCam.tagUserName(userName.toString()),
+    addTag: (tag, properties = {}) => UXCam.addTag(tag, properties),
+    markSessionAsFavorite: () => UXCam.markSessionAsFavorite(),
 
-  restartSession() {
-    return RNUXCam.restartSession();
-  }
-
-  setAutomaticScreenNameTagging(enableScreenNameTagging) {
-    return RNUXCam.setAutomaticScreenNameTagging(enableScreenNameTagging);
-  }
-
-  // --------------------------------------------------
-  // Occlude
-  // --------------------------------------------------
-  occludeSensitiveScreen(shouldOcclude) {
-    return RNUXCam.occludeSensitiveScreen(shouldOcclude);
-  }
-
-  // --------------------------------------------------
-  // Tags
-  // --------------------------------------------------
-  tagScreenName(screenName) {
-    return RNUXCam.tagScreenName(screenName);
-  }
-
-  tagUserName(userName) {
-    // Native expects a string so we have to coerce any integers
-    // to strings.
-    return RNUXCam.tagUserName(userName.toString());
-  }
-
-  addTag(tag, properties = {}) {
-    return RNUXCam.addTag(tag, properties);
-  }
-
-  markSessionAsFavorite() {
-    return RNUXCam.markSessionAsFavorite();
-  }
-
-  // --------------------------------------------------
-  // URLs
-  // --------------------------------------------------
-  async urlForCurrentUser() {
-    return RNUXCam.urlForCurrentUser();
-  }
-
-  async urlForCurrentSession() {
-    return RNUXCam.urlForCurrentSession();
-  }
-
-}
-
-
-export default new UXCam();
+    // URLs
+    urlForCurrentUser: () => UXCam.urlForCurrentUser(),
+    urlForCurrentSession: () => UXCam.urlForCurrentSession(),
+  }),
+});
