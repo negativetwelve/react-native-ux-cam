@@ -3582,6 +3582,23 @@ react-devtools-core@2.3.1:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-native-module-check@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-module-check/-/react-native-module-check-1.6.0.tgz#595f9b09377db4ef1d7858e1f4ab3fe4a8787fea"
+
+react-native-module-guard@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-module-guard/-/react-native-module-guard-1.2.0.tgz#2869a61aa29ec6a72424b29a0db08fbd186ffa6a"
+  dependencies:
+    warning "^3.0.0"
+
+react-native-package@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-package/-/react-native-package-1.1.0.tgz#69a1958283ba20737b0bfc686aaf8c92826ec9f5"
+  dependencies:
+    react-native-module-check "^1.6.0"
+    react-native-module-guard "^1.2.0"
+
 react-native@^0.47.1:
   version "0.47.1"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.47.1.tgz#b4a1f1e92a57ff5868de2bfa9d8ece3192635242"
@@ -4515,6 +4532,12 @@ walker@~1.0.5:
   resolved "https://registry.yarnpkg.com/walker/-/walker-1.0.7.tgz#2f7f9b8fd10d677262b18a884e28d19618e028fb"
   dependencies:
     makeerror "1.0.x"
+
+warning@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
+  dependencies:
+    loose-envify "^1.0.0"
 
 watch@~0.10.0:
   version "0.10.0"
