@@ -9,31 +9,27 @@ React Native wrapper for [UXCam](https://uxcam.com).
 
 ## Setup
 
-```bash
-# Yarn
+```shell
 yarn add react-native-ux-cam
-
-# NPM
-npm install --save react-native-ux-cam
 ```
 
 ### iOS with react-native and Cocoapods
 
 Run the following:
 
-```bash
+```shell
 react-native link react-native-ux-cam
 ```
 
 Then, add the following to your Podfile:
 
 ```ruby
-pod "UXCam", "~> 2.5.8"
+pod "UXCam", "~> 2.5.12"
 ```
 
 Then run:
 
-```bash
+```shell
 pod install
 ```
 
@@ -43,7 +39,7 @@ You're done! :tada:
 
 Run the following:
 
-```bash
+```shell
 react-native link react-native-ux-cam
 ```
 
@@ -51,9 +47,9 @@ Then add the following to your file `android/app/build.gradle` (or add the maven
 
 ```gradle
 repositories {
-    maven {
-        url 'http://sdk.uxcam.com/android'
-    }
+  maven {
+    url 'http://sdk.uxcam.com/android'
+  }
 }
 ```
 
