@@ -24,7 +24,7 @@
     "react-native-ux-cam.podspec"
   ],
   "dependencies": {
-    "react-native-package": "^2.3.0"
+    "react-native-package": "^2.4.0"
   },
   "peerDependencies": {
     "react-native": "*"
