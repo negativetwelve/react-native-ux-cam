@@ -7,7 +7,7 @@
 
 React Native wrapper for [UXCam](https://uxcam.com).
 
-## Setup
+## Getting Started
 
 ```shell
 yarn add react-native-ux-cam
