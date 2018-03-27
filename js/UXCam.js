@@ -24,6 +24,7 @@ export default Package.create({
   export: (UXCam) => ({
     // Initialize
     startWithKey: (key) => UXCam.startWithKey(key),
+    stopRecordingScrollingOnStutterOS: () => UXCam.stopRecordingScrollingOnStutterOS(),
     stopApplicationAndUploadData: () => UXCam.stopApplicationAndUploadData(),
     restartSession: () => UXCam.restartSession(),
     setAutomaticScreenNameTagging: (isEnabled) => UXCam.setAutomaticScreenNameTagging(isEnabled),

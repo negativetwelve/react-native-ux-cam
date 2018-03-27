@@ -23,6 +23,10 @@ RCT_EXPORT_METHOD(startWithKey:(NSString *)key) {
   [UXCam startWithKey:key];
 }
 
+RCT_EXPORT_METHOD(stopRecordingScrollingOnStutterOS) {
+  [UXCam StopRecordingScrollingOnStutterOS:true];
+}
+
 RCT_EXPORT_METHOD(stopApplicationAndUploadData) {
   [UXCam stopApplicationAndUploadData];
 }

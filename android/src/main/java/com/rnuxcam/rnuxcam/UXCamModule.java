@@ -28,6 +28,11 @@ public class UXCamModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
+  public void stopRecordingScrollingOnStutterOS() {
+    // TODO(mark): Not available on Android.
+  }
+
+  @ReactMethod
   public void stopApplicationAndUploadData() {
     UXCam.stopApplicationAndUploadData();
   }
