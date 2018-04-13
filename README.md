@@ -33,6 +33,12 @@ Then run:
 pod install
 ```
 
+Note: if you get 'UXCam/UXCam.h' file not found' issue, please do the following in xcode, to solve this issue you have to do few manual settings in xcode:
+
+- under libraries in xcode add 'RNUXCam.xcodeproj' from node_modules
+- go to build settings of 'RNUXCam.xcodeproj' and replace Framework search paths from '$(SRCROOT)/../../../ios' to '$(SRCROOT)/../../../ios/Pods/UXCam'
+ 
+
 You're done! :tada:
 
 ### Android
