@@ -210,7 +210,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../../../ios/**",
+					"$(SRCROOT)/../../../ios/Pods/UXCam/**",
 					"$(SRCROOT)/../../../apps/student/clients/ios/**",
 				);
 				HEADER_SEARCH_PATHS = (
@@ -231,7 +231,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../../../ios/**",
+					"$(SRCROOT)/../../../ios/Pods/UXCam/**",
 					"$(SRCROOT)/../../../apps/student/clients/ios/**",
 				);
 				HEADER_SEARCH_PATHS = (
