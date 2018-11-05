@@ -43,7 +43,7 @@ Run the following:
 react-native link react-native-ux-cam
 ```
 
-Then add the following to your file `android/app/build.gradle` (or add the maven url to your existing repositories section):
+Then add the following to your file `android/build.gradle` (or add the maven url to your existing repositories section):
 
 ```gradle
 repositories {
