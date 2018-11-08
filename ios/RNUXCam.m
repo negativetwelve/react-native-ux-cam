@@ -39,6 +39,22 @@ RCT_EXPORT_METHOD(occludeSensitiveScreen:(BOOL)occlude) {
   [UXCam occludeSensitiveScreen:occlude];
 }
 
+RCT_EXPORT_METHOD(occludeAllTextFields:(BOOL)occlude) {
+  [UXCam occludeAllTextFields:occlude];
+}
+
+RCT_EXPORT_METHOD(allowShortBreakForAnotherApp:(BOOL)continueSession) {
+  [UXCam allowShortBreakForAnotherApp:continueSession ? 1 : 0];
+}
+
+RCT_EXPORT_METHOD(resumeShortBreakForAnotherApp) {
+  [UXCam resumeShortBreakForAnotherApp];
+}
+
+RCT_EXPORT_METHOD(disableCrashHandling:(BOOL)disable) {
+  [UXCam disableCrashHandling:disable];
+}
+
 RCT_EXPORT_METHOD(tagScreenName:(NSString *)screenName) {
   [UXCam tagScreenName:screenName];
 }

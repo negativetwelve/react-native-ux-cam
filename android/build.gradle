@@ -31,5 +31,5 @@ repositories {
 
 dependencies {
   compile 'com.facebook.react:react-native:+'
-  compile 'com.uxcam:uxcam:2.6.5@aar'
+  implementation 'com.uxcam:uxcam:3.0.3@aar'
 }

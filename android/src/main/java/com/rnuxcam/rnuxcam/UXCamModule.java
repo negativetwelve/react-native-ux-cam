@@ -33,6 +33,21 @@ public class UXCamModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
+  public void allowShortBreakForAnotherApp(boolean continueSession) {
+    UXCam.allowShortBreakForAnotherApp(continueSession ? 1 : 0);
+  }
+
+  @ReactMethod
+  public void resumeShortBreakForAnotherApp() {
+    UXCam.resumeShortBreakForAnotherApp();
+  }
+
+  @ReactMethod
+  public void disableCrashHandling(boolean disable) {
+    // TODO(mark): Not available on Android.
+  }
+
+  @ReactMethod
   public void restartSession() {
     // TODO(mark): Not available on Android.
   }
@@ -45,6 +60,11 @@ public class UXCamModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void occludeSensitiveScreen(boolean occlude) {
     UXCam.occludeSensitiveScreen(occlude);
+  }
+
+  @ReactMethod
+  public void occludeAllTextFields(boolean occlude) {
+    UXCam.occludeAllTextFields(occlude);
   }
 
   @ReactMethod

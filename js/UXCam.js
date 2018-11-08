@@ -1,7 +1,6 @@
 // Libraries
-import {NativeModules, Platform} from 'react-native';
+import { NativeModules, Platform } from 'react-native';
 import Package from 'react-native-package';
-
 
 /**
  * Package.create handles two things:
@@ -19,26 +18,34 @@ export default Package.create({
   nativeModule: NativeModules.RNUXCam,
   enabled: Platform.select({
     android: true,
-    ios: true,
+    ios: true
   }),
-  export: (UXCam) => ({
-    // Initialize
-    startWithKey: (key) => UXCam.startWithKey(key),
+  export: UXCam => ({
+    // Initialize & control recording
+    startWithKey: key => UXCam.startWithKey(key),
     stopApplicationAndUploadData: () => UXCam.stopApplicationAndUploadData(),
     restartSession: () => UXCam.restartSession(),
-    setAutomaticScreenNameTagging: (isEnabled) => UXCam.setAutomaticScreenNameTagging(isEnabled),
+    setAutomaticScreenNameTagging: isEnabled =>
+      UXCam.setAutomaticScreenNameTagging(isEnabled),
+    allowShortBreakForAnotherApp: continueSession =>
+      UXCam.allowShortBreakForAnotherApp(continueSession),
+    resumeShortBreakForAnotherApp: () => UXCam.resumeShortBreakForAnotherApp(),
+    disableCrashHandling: disable => UXCam.disableCrashHandling(disable),
 
     // Occlude
-    occludeSensitiveScreen: (shouldOcclude) => UXCam.occludeSensitiveScreen(shouldOcclude),
+    occludeSensitiveScreen: shouldOcclude =>
+      UXCam.occludeSensitiveScreen(shouldOcclude),
+    occludeAllTextFields: shouldOcclude =>
+      UXCam.occludeAllTextFields(shouldOcclude),
 
     // Tags
-    tagScreenName: (screenName) => UXCam.tagScreenName(screenName),
-    tagUserName: (userName) => UXCam.tagUserName(userName.toString()),
+    tagScreenName: screenName => UXCam.tagScreenName(screenName),
+    tagUserName: userName => UXCam.tagUserName(userName.toString()),
     addTag: (tag, properties = {}) => UXCam.addTag(tag, properties),
     markSessionAsFavorite: () => UXCam.markSessionAsFavorite(),
 
     // URLs
     urlForCurrentUser: () => UXCam.urlForCurrentUser(),
-    urlForCurrentSession: () => UXCam.urlForCurrentSession(),
-  }),
+    urlForCurrentSession: () => UXCam.urlForCurrentSession()
+  })
 });
