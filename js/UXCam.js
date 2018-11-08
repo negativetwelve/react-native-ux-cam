@@ -1,5 +1,5 @@
 // Libraries
-import {NativeModules, Platform} from 'react-native';
+import {NativeModules, Platform, requireNativeComponent} from 'react-native';
 import Package from 'react-native-package';
 
 
@@ -30,6 +30,7 @@ export default Package.create({
 
     // Occlude
     occludeSensitiveScreen: (shouldOcclude) => UXCam.occludeSensitiveScreen(shouldOcclude),
+    occludeAllTextFields: (shouldOcclude) => UXCam.occludeAllTextFields(shouldOcclude),
 
     // Tags
     tagScreenName: (screenName) => UXCam.tagScreenName(screenName),
@@ -42,3 +43,6 @@ export default Package.create({
     urlForCurrentSession: () => UXCam.urlForCurrentSession(),
   }),
 });
+
+//  Wrapper view for hiding sensitive user data
+export const SensitiveView = requireNativeComponent('RNTSensitiveViewManager', null);

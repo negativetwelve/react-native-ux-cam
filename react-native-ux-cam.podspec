@@ -14,6 +14,5 @@ Pod::Spec.new do |s|
   s.source_files = "ios/*"
   s.platform = :ios, "8.0"
 
-  s.dependency "React"
   s.dependency "UXCam", "~> 2.5.8"
 end

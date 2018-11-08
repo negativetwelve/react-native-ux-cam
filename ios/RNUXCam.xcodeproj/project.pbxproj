@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4DBE4C261DBB6C1300BA59DB /* RNUXCam.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE4C251DBB6C1300BA59DB /* RNUXCam.m */; };
+		7E102AD1219497370001A290 /* RNUXCamSensitiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E102AD0219497370001A290 /* RNUXCamSensitiveView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,7 @@
 		112EE36D1CC0AB8A00BF6BB8 /* libRNUXCam.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNUXCam.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBE4C251DBB6C1300BA59DB /* RNUXCam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNUXCam.m; sourceTree = "<group>"; };
 		4DBE4C271DBB6C2300BA59DB /* RNUXCam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNUXCam.h; sourceTree = "<group>"; };
+		7E102AD0219497370001A290 /* RNUXCamSensitiveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNUXCamSensitiveView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		112EE3641CC0AB8A00BF6BB8 = {
 			isa = PBXGroup;
 			children = (
+				7E102AD0219497370001A290 /* RNUXCamSensitiveView.m */,
 				4DBE4C251DBB6C1300BA59DB /* RNUXCam.m */,
 				4DBE4C271DBB6C2300BA59DB /* RNUXCam.h */,
 				112EE36E1CC0AB8A00BF6BB8 /* Products */,
@@ -112,6 +115,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E102AD1219497370001A290 /* RNUXCamSensitiveView.m in Sources */,
 				4DBE4C261DBB6C1300BA59DB /* RNUXCam.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
