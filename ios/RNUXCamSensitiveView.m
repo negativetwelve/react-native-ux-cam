@@ -9,10 +9,10 @@
 #import <UXCam/UXCam.h>
 #import <React/RCTViewManager.h>
 
-@interface RNTSensitiveViewManager : RCTViewManager
+@interface RNUXCamSensitiveView : RCTViewManager
 @end
 
-@implementation RNTSensitiveViewManager
+@implementation RNUXCamSensitiveView
 
 RCT_EXPORT_MODULE()
 

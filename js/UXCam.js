@@ -45,4 +45,4 @@ export default Package.create({
 });
 
 //  Wrapper view for hiding sensitive user data
-export const SensitiveView = requireNativeComponent('RNTSensitiveViewManager', null);
+export const SensitiveView = requireNativeComponent('RNUXCamSensitiveView', null);
