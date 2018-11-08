@@ -39,10 +39,6 @@ RCT_EXPORT_METHOD(occludeSensitiveScreen:(BOOL)occlude) {
   [UXCam occludeSensitiveScreen:occlude];
 }
 
-RCT_EXPORT_METHOD(occludeAllTextFields:(BOOL)occlude) {
-    [UXCam occludeAllTextFields:occlude];
-}
-
 RCT_EXPORT_METHOD(tagScreenName:(NSString *)screenName) {
   [UXCam tagScreenName:screenName];
 }
