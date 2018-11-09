@@ -29,7 +29,7 @@ public class UXCamModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void stopApplicationAndUploadData() {
-    UXCam.stopApplicationAndUploadData();
+    UXCam.stopApplicationAndUploadSession();
   }
 
   @ReactMethod
@@ -74,7 +74,7 @@ public class UXCamModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void tagUserName(String userName) {
-    UXCam.tagUsersName(userName);
+    UXCam.setUserIdentity(userName);
   }
 
   @ReactMethod
@@ -87,7 +87,7 @@ public class UXCamModule extends ReactContextBaseJavaModule {
       String value = properties.getString(key);
       map.put(key, value);
     }
-    UXCam.addTagWithProperties(tag, map);
+    UXCam.logEvent(tag, map);
   }
 
   @ReactMethod
