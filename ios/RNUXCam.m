@@ -24,15 +24,15 @@ RCT_EXPORT_METHOD(startWithKey:(NSString *)key) {
 }
 
 RCT_EXPORT_METHOD(stopApplicationAndUploadData) {
-  [UXCam stopApplicationAndUploadData];
+  [UXCam stopSessionAndUploadData];
 }
 
 RCT_EXPORT_METHOD(restartSession) {
-  [UXCam restartSession];
+  [UXCam startNewSession];
 }
 
 RCT_EXPORT_METHOD(setAutomaticScreenNameTagging:(BOOL)automaticScreenNameTagging) {
-  [UXCam SetAutomaticScreenNameTagging:automaticScreenNameTagging];
+  [UXCam setAutomaticScreenNameTagging:automaticScreenNameTagging];
 }
 
 RCT_EXPORT_METHOD(occludeSensitiveScreen:(BOOL)occlude) {
@@ -48,7 +48,7 @@ RCT_EXPORT_METHOD(allowShortBreakForAnotherApp:(BOOL)continueSession) {
 }
 
 RCT_EXPORT_METHOD(resumeShortBreakForAnotherApp) {
-  [UXCam resumeShortBreakForAnotherApp];
+    // TODO: Mark not available in iOS
 }
 
 RCT_EXPORT_METHOD(disableCrashHandling:(BOOL)disable) {
@@ -60,11 +60,11 @@ RCT_EXPORT_METHOD(tagScreenName:(NSString *)screenName) {
 }
 
 RCT_EXPORT_METHOD(tagUserName:(NSString *)userName) {
-  [UXCam tagUsersName:userName];
+  [UXCam setUserIdentity:userName];
 }
 
 RCT_EXPORT_METHOD(addTag:(NSString *)tag withProperties:(NSDictionary *)properties) {
-  [UXCam addTag:tag withProperties:properties];
+    [UXCam logEvent:tag withProperties:properties];
 }
 
 RCT_EXPORT_METHOD(markSessionAsFavorite) {
