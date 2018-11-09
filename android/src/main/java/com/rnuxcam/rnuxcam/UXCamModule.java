@@ -10,6 +10,7 @@ import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import com.facebook.react.bridge.Promise;
 
 import java.util.HashMap;
+// import android.util.Log;
 
 public class UXCamModule extends ReactContextBaseJavaModule {
 
@@ -29,12 +30,14 @@ public class UXCamModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void stopApplicationAndUploadData() {
-    UXCam.stopApplicationAndUploadSession();
+    UXCam.stopSessionAndUploadData();
   }
 
   @ReactMethod
-  public void allowShortBreakForAnotherApp(boolean continueSession) {
-    UXCam.allowShortBreakForAnotherApp(continueSession ? 1 : 0);
+  public void allowShortBreakForAnotherApp(Integer breakInMsec) {
+    // Log.w("ReactNativeJS", "breakInMsec: " + breakInMsec);
+
+    UXCam.allowShortBreakForAnotherApp(breakInMsec);
   }
 
   @ReactMethod
