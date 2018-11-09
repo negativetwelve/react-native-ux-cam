@@ -96,6 +96,13 @@ UXCam.occludeSensitiveScreen(true);
 // Unhide a sensitive screen.
 UXCam.occludeSensitiveScreen(false);
 
+// To hide a sensitive data import SensitiveView component and wrap sensitive view.
+import { SensitiveView } from 'react-native-ux-cam';
+
+<SensitiveView>
+  <Text>Private data which you want occlude</Text>
+</SensitiveView>
+
 // Stop recording and upload data manually.
 UXCam.stopApplicationAndUploadData();
 
