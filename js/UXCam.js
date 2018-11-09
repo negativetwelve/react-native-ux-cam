@@ -27,8 +27,8 @@ export default Package.create({
     restartSession: () => UXCam.restartSession(),
     setAutomaticScreenNameTagging: isEnabled =>
       UXCam.setAutomaticScreenNameTagging(isEnabled),
-    allowShortBreakForAnotherApp: continueSession =>
-      UXCam.allowShortBreakForAnotherApp(continueSession),
+    allowShortBreakForAnotherApp: breakInMsec =>
+      UXCam.allowShortBreakForAnotherApp(breakInMsec),
     resumeShortBreakForAnotherApp: () => UXCam.resumeShortBreakForAnotherApp(),
     disableCrashHandling: disable => UXCam.disableCrashHandling(disable),
 

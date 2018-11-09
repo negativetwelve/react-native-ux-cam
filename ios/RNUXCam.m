@@ -43,8 +43,8 @@ RCT_EXPORT_METHOD(occludeAllTextFields:(BOOL)occlude) {
   [UXCam occludeAllTextFields:occlude];
 }
 
-RCT_EXPORT_METHOD(allowShortBreakForAnotherApp:(BOOL)continueSession) {
-  [UXCam allowShortBreakForAnotherApp:continueSession ? 1 : 0];
+RCT_EXPORT_METHOD(allowShortBreakForAnotherApp:(NSInteger)breakInMsec) {
+  [UXCam allowShortBreakForAnotherApp:breakInMsec];
 }
 
 RCT_EXPORT_METHOD(resumeShortBreakForAnotherApp) {
