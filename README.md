@@ -1,6 +1,6 @@
 # react-native-uxcam
 
-## installation
+## Installation
 `$yarn add file:/path-to-the-uxcam-react-wrapper`
 `$react-native link react-native-uxcam`
 
@@ -11,7 +11,7 @@ import RNUxcam from 'react-native-uxcam';
 
 RNUxcam.startWithKey('YOUR API KEY');
 ```
-# for testing example app
+# For testing example app
 ## Setup
 `yarn install`
 `yarn add react-native-uxcam`
@@ -23,3 +23,7 @@ RNUxcam.startWithKey('YOUR API KEY');
 ## Running
 `react-native run-android`
 `react-native run-ios`
+
+
+## History
+This is an updated way of integrating the UXCam SDK react-native following on from the original work by Mark Miyashita (@negativetwelve) without whom this would have all been much harder!
