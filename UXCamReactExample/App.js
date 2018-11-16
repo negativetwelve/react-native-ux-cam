@@ -38,7 +38,7 @@ export default class App extends Component<Props> {
     );
   }
   componentDidMount(){
-    RNUxcam.startWithKey('1haj3qhhrcl9trs');
+    RNUxcam.startWithKey('UXCAM_KEY');
     RNUxcam.setUserIdentity('USER_IDENTITY');
   }
   _handlePress(event) {
