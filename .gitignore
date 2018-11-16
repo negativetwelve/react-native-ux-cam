@@ -8,9 +8,7 @@ local.properties
 *.iml
 *.iws
 *.ipr
-/UXCamReactExample/android
-/UXCamReactExample/ios
-/UXCamReactExample/node_modules
+
 
 # Xcode
 build/
