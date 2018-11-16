@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "16.6.1",
     "react-native": "0.57.5",
-    "react-native-ux-cam": "file:../../AndroidStudioProjects/react-native-ux-cam"
+    "react-native-uxcam": "/Users/uxcam/AndroidStudioProjects/react-native-uxcam/uxcam-react-wrapper"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",

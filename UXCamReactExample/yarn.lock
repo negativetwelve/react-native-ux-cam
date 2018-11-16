@@ -4616,33 +4616,8 @@ react-is@^16.6.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.3.tgz#d2d7462fcfcbe6ec0da56ad69047e47e56e7eac0"
   integrity sha512-u7FDWtthB4rWibG/+mFbVd5FvdI20yde86qKGx4lVUTWmPlSWQ4QxbBIrrs+HnXGbxOUlUzTAP/VDmvCwaP2yA==
 
-react-native-module-check@^2.6.2:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/react-native-module-check/-/react-native-module-check-2.6.2.tgz#c4112e6cd0837f71631fd302386da6dbdd2b8414"
-  integrity sha512-Thm+dfELhc7FZ86Hsoxc25gtQa65C+Z9BXhi9rxDcnRKwCJ+DoCED5jdfvFm8g03WzYkqGojncZ1lNZ+c/sfUg==
-  dependencies:
-    invariant "^2.2.2"
-    warning "^3.0.0"
-
-react-native-module-guard@^2.6.2:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/react-native-module-guard/-/react-native-module-guard-2.6.2.tgz#44d7f85d6bf778cc597c97c7d228938d8e2db388"
-  integrity sha512-jXY25yZVYf2VpYU/vC7lsZ4b/9avP7otrZVQ/OQRf39KasxRYaIZTmR69LYlguM7x9Vo3VXe27zor9fibwfi1A==
-  dependencies:
-    warning "^3.0.0"
-
-react-native-package@^2.5.0:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/react-native-package/-/react-native-package-2.6.2.tgz#d8266653305580b6e94a3aa80a972b8a73f3939a"
-  integrity sha512-Ic8jFJI/CBgxAOGA/iCPkM8nFj6tMstGUIiUIWP4JlBlod0EtVQ+ch8y61XFdfBM7AhUdYQ77HplJ7GgtF1JxQ==
-  dependencies:
-    react-native-module-check "^2.6.2"
-    react-native-module-guard "^2.6.2"
-
-"react-native-ux-cam@file:../../AndroidStudioProjects/react-native-ux-cam":
-  version "4.5.0"
-  dependencies:
-    react-native-package "^2.5.0"
+"react-native-uxcam@file:../uxcam-react-wrapper":
+  version "1.0.0"
 
 react-native@0.57.5:
   version "0.57.5"
@@ -5777,13 +5752,6 @@ walker@~1.0.5:
   integrity sha1-L3+bj9ENZ3JisYqITijRlhjgKPs=
   dependencies:
     makeerror "1.0.x"
-
-warning@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
-  integrity sha1-MuU3fLVy3kqwR1O9+IIcAe1gW3w=
-  dependencies:
-    loose-envify "^1.0.0"
 
 watch@~0.18.0:
   version "0.18.0"

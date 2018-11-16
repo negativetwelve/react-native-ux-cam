@@ -8,7 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,Button} from 'react-native';
-import RNUxcam from 'react-native-ux-cam';
+import RNUxcam from 'react-native-uxcam';
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -28,7 +28,7 @@ export default class App extends Component<Props> {
           
             if(input !=null){
               // console.error('value of input '+input);
-              // RNUxcam.occludeSensitiveView(input);
+              RNUxcam.occludeSensitiveView(input);
               // console.error('occuling');
             }
         } }
@@ -38,7 +38,7 @@ export default class App extends Component<Props> {
     );
   }
   componentDidMount(){
-    RNUxcam.startWithKey('UXCAM_KEY');
+    RNUxcam.startWithKey('1haj3qhhrcl9trs');
     RNUxcam.setUserIdentity('USER_IDENTITY');
   }
   _handlePress(event) {
