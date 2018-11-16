@@ -26,4 +26,4 @@ RNUxcam.startWithKey('YOUR API KEY');
 
 
 ## History
-This is an updated way of integrating the UXCam SDK react-native following on from the original work by Mark Miyashita (@negativetwelve) without whom this would have all been much harder!
+This is an updated way of integrating the UXCam SDK react-native following on from the original work by Mark Miyashita (https://github.com/negativetwelve) without whom this would have all been much harder!
