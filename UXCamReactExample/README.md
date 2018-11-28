@@ -2,7 +2,7 @@
 
 ## Setup
 `yarn install`
-`yarn add react-native-uxcam`
+`yarn add react-native-ux-cam`
 ### or if adding locally
 `yarn add file:/path-to-uxcam-plugin`
 
