@@ -1,4 +1,4 @@
-# react-native-uxcam
+# react-native-ux-cam
 
 ## Installation
 `$yarn add file:/path-to-the-uxcam-react-wrapper`
