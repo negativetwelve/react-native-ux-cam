@@ -2,11 +2,11 @@
 
 ## Installation
 `$yarn add file:/path-to-the-uxcam-react-wrapper`
-`$react-native link react-native-uxcam`
+`$react-native link react-native-ux-cam`
 
 ## Usage
 ```javascript
-import RNUxcam from 'react-native-uxcam';
+import RNUxcam from 'react-native-ux-cam';
 
 
 RNUxcam.startWithKey('YOUR API KEY');
@@ -14,7 +14,7 @@ RNUxcam.startWithKey('YOUR API KEY');
 # For testing example app
 ## Setup
 `yarn install`
-`yarn add react-native-uxcam`
+`yarn add react-native-ux-cam`
 ### or if adding locally
 `yarn add file:/path-to-uxcam-plugin`
 
