@@ -9,7 +9,6 @@
   "dependencies": {
     "react": "16.6.1",
     "react-native": "0.57.5",
-    "react-native-appsee": "^2.4.14",
     "react-native-deck-swiper": "^1.5.25",
     "react-native-ux-cam": "file:/Users/uxcam/AndroidStudioProjects/react-native-uxcam/uxcam-react-wrapper",
     "react-navigation": "^3.0.0"
