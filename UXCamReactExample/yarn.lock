@@ -4696,11 +4696,6 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-native-appsee@^2.4.14:
-  version "2.4.14"
-  resolved "https://registry.yarnpkg.com/react-native-appsee/-/react-native-appsee-2.4.14.tgz#57c80dd966e4eec9b8842aeb55a42c832deafba9"
-  integrity sha512-EuQIUEWsDVfH+dI9tFZxblhinVI8O67Iohc+YxFttUhqy8k0TZlVV8bllNKoJYIcQg1aztiRfm3A2HblWy0r4Q==
-
 react-native-deck-swiper@^1.5.25:
   version "1.5.25"
   resolved "https://registry.yarnpkg.com/react-native-deck-swiper/-/react-native-deck-swiper-1.5.25.tgz#1188339cc33bb87f629cb963e8ef5f6a9a9305d7"
@@ -4736,8 +4731,8 @@ react-native-tab-view@^1.0.0, react-native-tab-view@^1.2.0:
   dependencies:
     prop-types "^15.6.1"
 
-"react-native-ux-cam@file:/Users/uxcam/AndroidStudioProjects/react-native-uxcam/uxcam-react-wrapper":
-  version "1.0.0"
+"react-native-ux-cam@file:../uxcam-react-wrapper":
+  version "3.0.0"
 
 react-native@0.57.5:
   version "0.57.5"
