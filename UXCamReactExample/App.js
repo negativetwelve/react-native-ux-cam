@@ -16,6 +16,8 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
+
+
 type Props = {};
 export default class App extends Component<Props> {
   render() {
@@ -24,27 +26,27 @@ export default class App extends Component<Props> {
         <Text style={styles.welcome}>Welcome to React Native only!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        <Button ref={ function(input){
-          
-            if(input !=null){
-              // console.error('value of input '+input);
-              // RNUxcam.occludeSensitiveView(input);
-              // console.error('occuling');
-            }
-        } }
-        onPress={this._handlePress}
-        title="UXCam" />
-        <Button ref={ x => RNUxcam.occludeSensitiveView(x)}title="Press Me" onPress={this._handlePress} />
+        <Button onPress={this._handlePress} title="UXCam" />
+         
+        <Text ref={(label) => { RNUxcam.occludeSensitiveView(label); }} style={styles.label} > {this.strings(23)} </Text>
+        <Button ref={ x => {RNUxcam.occludeSensitiveView(x);}}title="Press Me" onPress={this._handlePress} />
+        <Button ref={ x => {RNUxcam.occludeSensitiveViewWithoutGesture(x);}}title="Hiding Gestures" onPress={this._handlePress} />
+        
       </View>
     );
   }
   componentDidMount(){
-    RNUxcam.startWithKey('UXCAM_KEY');
+    RNUxcam.startWithKey('UXCAM_APP_KEY');
     RNUxcam.setUserIdentity('USER_IDENTITY');
+    RNUxcam.logEvent("LOGGING_EVENT");
+    
+  }
+  strings(value){
+    return value;
   }
   _handlePress(event) {
     
-    
+    RNUxcam.occludeSensitiveScreen(true,true);
   }
 }
 

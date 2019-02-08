@@ -4732,7 +4732,7 @@ react-native-tab-view@^1.0.0, react-native-tab-view@^1.2.0:
     prop-types "^15.6.1"
 
 "react-native-ux-cam@file:../uxcam-react-wrapper":
-  version "3.0.0"
+  version "5.0.1"
 
 react-native@0.57.5:
   version "0.57.5"
