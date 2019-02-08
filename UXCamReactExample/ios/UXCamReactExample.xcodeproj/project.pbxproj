@@ -38,7 +38,7 @@
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		CCE7BBEDB23E47A1BDA79374 /* libRNUxcam.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E5CD2992734F4D9C81BCB3 /* libRNUxcam.a */; };
+		ADCEE45A896B40EEBC594AC8 /* libRNUxcam.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F14626EE7E472D8CE2D6E0 /* libRNUxcam.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -280,9 +280,9 @@
 			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
 			remoteInfo = "jschelpers-tvOS";
 		};
-		3E57FFF521A51C1300C569F4 /* PBXContainerItemProxy */ = {
+		3E3D777E220D2F8F009D49AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DFC74588D35549F1952DECDE /* RNUxcam.xcodeproj */;
+			containerPortal = C251D30BF07D469C9B0297DF /* RNUxcam.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNUxcam;
@@ -347,12 +347,12 @@
 		2D02E47B1E0B4A5D006451C7 /* UXCamReactExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UXCamReactExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* UXCamReactExample-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UXCamReactExample-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		51E5CD2992734F4D9C81BCB3 /* libRNUxcam.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNUxcam.a; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		70F14626EE7E472D8CE2D6E0 /* libRNUxcam.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNUxcam.a; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		DFC74588D35549F1952DECDE /* RNUxcam.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNUxcam.xcodeproj; path = "../node_modules/react-native-ux-cam/ios/RNUxcam.xcodeproj"; sourceTree = "<group>"; };
+		C251D30BF07D469C9B0297DF /* RNUxcam.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNUxcam.xcodeproj; path = "../node_modules/react-native-ux-cam/ios/RNUxcam.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,7 +380,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				CCE7BBEDB23E47A1BDA79374 /* libRNUxcam.a in Frameworks */,
+				ADCEE45A896B40EEBC594AC8 /* libRNUxcam.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,18 +534,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3E57FFCC21A51C0D00C569F4 /* Recovered References */ = {
+		3E3D7755220D2F8E009D49AB /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				51E5CD2992734F4D9C81BCB3 /* libRNUxcam.a */,
+				70F14626EE7E472D8CE2D6E0 /* libRNUxcam.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		3E57FFF221A51C1200C569F4 /* Products */ = {
+		3E3D777B220D2F8F009D49AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3E57FFF621A51C1300C569F4 /* libRNUxcam.a */,
+				3E3D777F220D2F8F009D49AB /* libRNUxcam.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -583,7 +583,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				DFC74588D35549F1952DECDE /* RNUxcam.xcodeproj */,
+				C251D30BF07D469C9B0297DF /* RNUxcam.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -605,7 +605,7 @@
 				00E356EF1AD99517003FC87E /* UXCamReactExampleTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				3E57FFCC21A51C0D00C569F4 /* Recovered References */,
+				3E3D7755220D2F8E009D49AB /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -792,8 +792,8 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-					ProductGroup = 3E57FFF221A51C1200C569F4 /* Products */;
-					ProjectRef = DFC74588D35549F1952DECDE /* RNUxcam.xcodeproj */;
+					ProductGroup = 3E3D777B220D2F8F009D49AB /* Products */;
+					ProjectRef = C251D30BF07D469C9B0297DF /* RNUxcam.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1031,11 +1031,11 @@
 			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3E57FFF621A51C1300C569F4 /* libRNUxcam.a */ = {
+		3E3D777F220D2F8F009D49AB /* libRNUxcam.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRNUxcam.a;
-			remoteRef = 3E57FFF521A51C1300C569F4 /* PBXContainerItemProxy */;
+			remoteRef = 3E3D777E220D2F8F009D49AB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
