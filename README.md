@@ -53,21 +53,17 @@ pod install
 
 ### Android
 
-1.
-Go to `android/settings.gradle`
+1. Go to `android/settings.gradle`
 add `include ':react-native-ux-cam'`
 and on the following line add `project(':react-native-ux-cam').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-ux-cam/android')` 
 
-2.
-Go to `android/app/build.gradle`
+2. Go to `android/app/build.gradle`
 add `compile project(':react-native-ux-cam')` under dependencies
 
-3.
-Go to `android/app/src/main/java/com/terravion/dbug/MainApplication.java`
+3. Go to `android/app/src/main/java/com/terravion/dbug/MainApplication.java`
 add `import com.rnuxcam.rnuxcam.UXCamPackage;`
 
-4.
-Add the following to your file `android/app/build.gradle` (or add the maven url to your existing repositories section):
+4. Add the following to your file `android/app/build.gradle` (or add the maven url to your existing repositories section):
 
 ```gradle
 allprojects {
@@ -77,8 +73,7 @@ allprojects {
 }
 ```
 
-5.
-And add this to your file `android/app/src/main/AndroidManifest.xml`, inside your `<application>` tag:
+5. And add this to your file `android/app/src/main/AndroidManifest.xml`, inside your `<application>` tag:
 
 ```xml
 <service android:name="com.uxcam.service.HttpPostService"/>
