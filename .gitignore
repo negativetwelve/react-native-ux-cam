@@ -44,3 +44,6 @@ package-lock.json
 # Fastlane
 **/fastlane/report.xml
 **/fastlane/test_output
+
+# VS Code
+.vscode
