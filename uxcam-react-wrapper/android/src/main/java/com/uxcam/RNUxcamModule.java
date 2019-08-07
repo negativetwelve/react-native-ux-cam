@@ -1,19 +1,26 @@
 package com.uxcam;
 
+import com.facebook.react.bridge.Arguments;
+import com.facebook.react.bridge.JavaOnlyArray;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReadableMapKeySetIterator;
+import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.uimanager.NativeViewHierarchyManager;
 import com.facebook.react.uimanager.UIBlock;
 import com.facebook.react.uimanager.UIManagerModule;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import android.view.View;
 import android.util.Log;
+import java.util.List;
 import com.uxcam.UXCam;
 
 public class RNUxcamModule extends ReactContextBaseJavaModule {
@@ -77,8 +84,8 @@ public class RNUxcamModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void addScreenNamesToIgnore(List<String> screenNames) {
-    UXCam.addScreenNamesToIgnore(screenNames);
+  public void addScreenNamesToIgnore(ReadableArray screenNames) {
+    UXCam.addScreenNamesToIgnore(screenNames.toArrayList());
   }
 
   @ReactMethod
@@ -87,16 +94,22 @@ public class RNUxcamModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void removeScreenNamesToIgnore(List<String> screenNames) {
-    UXCam.removeScreenNamesToIgnore(screenNames);
+  public void removeScreenNamesToIgnore(ReadableArray screenNames) {
+    UXCam.removeScreenNamesToIgnore(screenNames.toArrayList());
   }
 
   @ReactMethod
-  public void removeScreenNameToIgnore(){
-    UXCam.removeScreenNameToIgnore();
+  public void removeAllScreenNamesToIgnore(){
+    UXCam.removeAllScreenNamesToIgnore();
   }
 
-  @ReactMethod public void screenNamesBeingIgnored(Promise promise) {
+  @ReactMethod
+  public void screenNamesBeingIgnored(Promise promise) {
+    List<String> list = UXCam.screenNamesBeingIgnored();
+    WritableArray promiseArray= Arguments.createArray();
+      for (String screen : list) {
+          promiseArray.pushString(screen);
+      }
     promise.resolve(UXCam.screenNamesBeingIgnored());
   }
 
@@ -279,6 +292,7 @@ public class RNUxcamModule extends ReactContextBaseJavaModule {
         });
     
   }
+
   @ReactMethod
   public void occludeSensitiveViewWithoutGesture(final int id){
     UIManagerModule uiManager = getReactApplicationContext().getNativeModule(UIManagerModule.class);
@@ -300,6 +314,5 @@ public class RNUxcamModule extends ReactContextBaseJavaModule {
                     }
           }
         });
-    
   }
 }
