@@ -10,7 +10,7 @@
     "react": "16.6.1",
     "react-native": "0.57.5",
     "react-native-deck-swiper": "^1.5.25",
-    "react-native-ux-cam": "file:/Users/uxcam/ReactNativeProjects/react-native-ux-cam/uxcam-react-wrapper",
+    "react-native-ux-cam": "file:../uxcam-react-wrapper",
     "react-navigation": "^3.0.0"
   },
   "devDependencies": {
