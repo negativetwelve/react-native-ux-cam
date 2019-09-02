@@ -17,7 +17,6 @@ const instructions = Platform.select({
 });
 
 
-
 type Props = {};
 export default class App extends Component<Props> {
   render() {
@@ -36,22 +35,9 @@ export default class App extends Component<Props> {
     );
   }
   componentDidMount(){
-    // RNUxcam.useSchematicCapture(false);
     RNUxcam.startWithKey('UXCAM_APP_KEY');
     RNUxcam.optIntoSchematicRecordings();
-    // RNUxcam.setUserIdentity('USER_IDENTITY');
-    // RNUxcam.logEvent("LOGGING_EVENT");
-    // RNUxcam.addVerificationListener(myPromise);
-    
-    // var myPromise = new Promise(function(resolve,reject){
-    //   if(resolve){
-    //     RNUxcam.tagScreenName('Promiser');
-    //   }
-    // });
-
   }
-
-  
 
   strings(value){
     return value;
