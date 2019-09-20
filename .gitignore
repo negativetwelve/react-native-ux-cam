@@ -9,6 +9,8 @@ local.properties
 *.iws
 *.ipr
 
+# VSCode
+.vscode/
 
 # Xcode
 build/
