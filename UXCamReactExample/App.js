@@ -17,7 +17,6 @@ const instructions = Platform.select({
 });
 
 
-
 type Props = {};
 export default class App extends Component<Props> {
   render() {
@@ -37,10 +36,9 @@ export default class App extends Component<Props> {
   }
   componentDidMount(){
     RNUxcam.startWithKey('UXCAM_APP_KEY');
-    RNUxcam.setUserIdentity('USER_IDENTITY');
-    RNUxcam.logEvent("LOGGING_EVENT");
-    
+    RNUxcam.optIntoSchematicRecordings();
   }
+
   strings(value){
     return value;
   }

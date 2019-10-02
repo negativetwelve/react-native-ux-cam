@@ -5,6 +5,11 @@
 
 `$react-native link react-native-ux-cam`
 
+
+For react-native version 0.60 if using iOS you then need to:
+
+`cd ios && pod update && cd ..`
+
 ## Usage
 ```javascript
 import RNUxcam from 'react-native-ux-cam';
