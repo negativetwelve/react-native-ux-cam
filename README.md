@@ -8,14 +8,19 @@
 
 For react-native version 0.60 if using iOS you then need to:
 
-`cd ios && pod update && cd ..`
+`cd ios`
+
+Edit the `Podfile` first line to be `platform :ios, '10.0'` rather than `platform :ios, '9.0'` then run the following to install the CocoaPods:
+
+`pod update && cd ..`
 
 ## Usage
 ```javascript
 import RNUxcam from 'react-native-ux-cam';
-
+RNUxcam.optIntoSchematicRecordings(); // Add this line to enable iOS screen recordings
 RNUxcam.startWithKey('YOUR API KEY');
 ```
+
 # For testing example app
 ## Setup
 `yarn install`
