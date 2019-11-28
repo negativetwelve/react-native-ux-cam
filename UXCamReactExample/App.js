@@ -9,6 +9,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,Button} from 'react-native';
 import RNUxcam from 'react-native-ux-cam';
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -16,35 +17,44 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
+// Used to toggle the screen hiding
+var hideScreen = true
 
 type Props = {};
 export default class App extends Component<Props> {
+
+  componentDidMount(){
+    RNUxcam.startWithKey('YOUR UXCAM API KEY GOES HERE');
+    RNUxcam.optIntoSchematicRecordings();
+  }
+
   render() {
+
+   // Basic instructions and then some examples of occluding views from the UXCam recording
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native only!</Text>
+        <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        <Button onPress={this._handlePress} title="UXCam" />
-         
-        <Text ref={(label) => { RNUxcam.occludeSensitiveView(label); }} style={styles.label} > {this.strings(23)} </Text>
-        <Button ref={ x => {RNUxcam.occludeSensitiveView(x);}}title="Press Me" onPress={this._handlePress} />
-        <Button ref={ x => {RNUxcam.occludeSensitiveViewWithoutGesture(x);}}title="Hiding Gestures" onPress={this._handlePress} />
+        
+        <Button onPress={ this._handleEmptyPress } title="UXCam" />
+        <Text ref={ label => { RNUxcam.occludeSensitiveView(label); } } style={styles.label} > { "Label hidden from UXCam" } </Text>
+        <Button title="Press here to toggle hiding whole screen" onPress={ this._handlePress } />
+        <Button ref={ x => { RNUxcam.occludeSensitiveViewWithoutGesture(x); } } title="Gestures on this hidden button not recorded" onPress={ this._handleEmptyPress  } />
         
       </View>
     );
   }
-  componentDidMount(){
-    RNUxcam.startWithKey('UXCAM_APP_KEY');
-    RNUxcam.optIntoSchematicRecordings();
-  }
 
-  strings(value){
-    return value;
-  }
   _handlePress(event) {
-    
-    RNUxcam.occludeSensitiveScreen(true,true);
+  	// Toggle the whole screen being hidden  
+    RNUxcam.occludeSensitiveScreen(hideScreen, hideScreen);
+    hideScreen = !hideScreen
+  }
+  
+  _handleEmptyPress(event) {
+	// Just a placeholder button handler
+    console.log("A button was pressed");
   }
 }
 
@@ -65,4 +75,9 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  label: {
+    fontSize: 18,
+    textAlign: 'center',
+    margin: 10,
+  }, 
 });
