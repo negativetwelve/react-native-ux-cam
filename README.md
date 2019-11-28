@@ -30,9 +30,18 @@ RNUxcam.startWithKey('YOUR API KEY');
 `yarn add file:/path-to-uxcam-plugin`
 
 ## Add the key from UXCam to App.js file
+`RNUxcam.startWithKey('YOUR UXCAM API KEY GOES HERE');`
 
 ## Running
+
+### Android
 `react-native run-android`
+
+### iOS
+`cd iOS`
+Edit the `Podfile` first line to be `platform :ios, '10.0'` rather than `platform :ios, '9.0'` then run the following to install the CocoaPods:
+
+`pod update && cd ..`
 
 `react-native run-ios`
 
@@ -52,8 +61,9 @@ npm install --save react-native-ux-cam
 Add the following to your Podfile:
 
 ```ruby
-pod 'react-native-ux-cam', path: "../node_modules/react-native-ux-cam"
+pod 'RNUxcam', :path => '../node_modules/react-native-ux-cam'
 ```
+and edit the minimum version of iOS to be >=10.0
 
 Then run:
 
@@ -93,6 +103,9 @@ allprojects {
 ```js
 // Import UXCam.
 import UXCam from 'react-native-ux-cam';
+
+// Add this line to enable iOS screen recordings
+UXCam.optIntoSchematicRecordings(); 
 
 // Initialize using your app key.
 UXCam.startWithKey(key);
