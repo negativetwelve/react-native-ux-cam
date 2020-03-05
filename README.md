@@ -1,5 +1,15 @@
 # react-native-ux-cam
 
+Deprecation of this repo
+
+As of version 5.1.15, published 5 March 2020, we are moving to https://github.com/uxcam/react-native-ux-cam for all future updates.
+
+If you have issues, feature requests, pull requests etc. please put them in there.
+
+Thanks!
+Richard @ UXCam
+
+
 ## Installation
 `$yarn add file:/path-to-the-uxcam-react-wrapper`
 
